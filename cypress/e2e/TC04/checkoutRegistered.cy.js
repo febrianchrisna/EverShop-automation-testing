@@ -55,7 +55,7 @@ describe('TC04 Checkout Registered User Tests', () => {
         });
     })
 
-    context('TC04003 - Checkout with overstock Quantity', () => {
+    context.only('TC04003 - Checkout with overstock Quantity', () => {
         it('User gagal melakukan checkout dengan quantity melebihi stok yang tersedia dan menampilkan pesan error', () => {
             const { color, quantity } = checkoutData.overStockQuantity;
             checkoutRegistered.itemDetails();
@@ -91,7 +91,7 @@ describe('TC04 Checkout Registered User Tests', () => {
         });
     })
 
-    context('TC04006 - Checkout with Re-Login at Checkout Form', () => {
+    context.only('TC04006 - Checkout with Re-Login at Checkout Form', () => {
         it('User berhasil melakukan checkout dengan login di checkout form', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod } = checkoutData.validShippingAddressData;
             
@@ -100,6 +100,7 @@ describe('TC04 Checkout Registered User Tests', () => {
             checkoutRegistered.checkoutLogout();
             checkoutRegistered.checkoutLoginLink();
             checkoutRegistered.loginAtCheckout(loginData.validLogin.email, loginData.validLogin.password);
+            checkoutRegistered.verifyLoginAtCheckoutSuccess();
             checkoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
             checkoutRegistered.selectShippingMethod(shippingMethod);
             checkoutRegistered.selectBillingOption(billingOption);

@@ -181,7 +181,7 @@ class Checkout{
     }
 
     get itemQuantityInvalidStockErrorMessage(){
-        return cy.contains('We do not have enough stock');
+        return cy.contains('We do not have enough stock').should('be.visible');
     }
 
     get cardNumberInvalidErrorMessage(){
@@ -203,10 +203,13 @@ class Checkout{
     }
 
     itemDetailsColor(color){
+        cy.wait(3000);
         if (color) {
+            cy.wait(3000);
             cy.contains('.variant-option-list li', color).should('be.visible').click();
-            cy.wait(2000);
+            cy.wait(3000);
         }
+        cy.wait(3000);
     }
 
     fillItemQuantity(quantity){
@@ -239,9 +242,12 @@ class Checkout{
     }
 
     loginAtCheckout(email, password){
+        cy.intercept('POST', '**/customer/login*').as('loginRequest');
         this.checkoutEmailField.clear().type(email);
         this.checkoutPasswordField.clear().type(password);
         this.checkoutLoginButton.click();
+        cy.wait('@loginRequest', { timeout: 15000 });
+        cy.wait(3000);
     }
 
     fillGuestEmail(email){
@@ -255,6 +261,7 @@ class Checkout{
         if (address2) this.address2Field.clear().type(address2);
         if (city) this.cityField.clear().type(city);
         if (country) {
+            cy.wait(1000);
             this.countryDropdown.click();
             cy.wait(1000);
             cy.contains('[role="option"]:visible', country).click({ force: true });
@@ -287,8 +294,9 @@ class Checkout{
         if (address2) this.billingAddress2Field.clear().type(address2);
         if (city) this.billingCityField.clear().type(city);
         if (country) {
+            cy.wait(1000);
             this.billingCountryDropdown.click();
-            cy.wait(1500);
+            cy.wait(1000);
             cy.contains('[role="option"]:visible', country).click({ force: true });
             cy.wait(1000);
         }
@@ -408,6 +416,10 @@ class Checkout{
         .should('not.be.empty')
         .then(cy.wrap)
         .should('contain', "expiration year is in the past");
+    }
+
+    verifyLoginAtCheckoutSuccess() {
+        cy.contains('Logout').should('be.visible');
     }
 }
 

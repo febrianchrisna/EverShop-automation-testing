@@ -56,7 +56,7 @@
             "paymentMethod": "Cash On Delivery"
     },
         "overStockQuantity": {
-        "color": "Yellow",
+        "color": "White",
         "quantity": "99999"
     },
     "emptyData": {
