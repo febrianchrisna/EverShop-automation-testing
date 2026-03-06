@@ -132,6 +132,10 @@ class MyAccount{
         cy.contains('Address has been updated successfully').should('be.visible');
     }
 
+    verifyDeleteAddressSuccess(){
+        cy.contains('Address has been deleted successfully').should('be.visible');
+    }
+
     verifyEmptyAddressErrorMessage(){
         cy.contains('Full name is required').should('be.visible');
         cy.contains('Address is required').should('be.visible');

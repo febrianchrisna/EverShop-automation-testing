@@ -91,13 +91,10 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context.only('TC07006 - Delete Default Address', () => {
-        it('delete', () => {
-            for (let i = 0; i < 10; i++) {
+    context.only('TC07006 - Delete Address', () => {
+        it('Berhasil melakukan penghapusan alamat', () => {
             myAccountPage.clickDeleteAddress();
-            }
-           
+            myAccountPage.verifyDeleteAddressSuccess();
         })
     })
-
 })
