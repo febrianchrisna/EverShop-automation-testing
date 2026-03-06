@@ -1,0 +1,444 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 9,
+    "passes": 7,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-03-06T06:17:31.480Z",
+    "end": "2026-03-06T06:18:36.520Z",
+    "duration": 65040,
+    "testsRegistered": 9,
+    "passPercent": 77.77777777777779,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23c9392c-3b6d-41b5-a1ed-16ce18f249d6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC01\\loginPage.cy.js",
+      "file": "cypress\\e2e\\TC01\\loginPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "923ddc67-f041-43c9-b157-8b545254210f",
+          "title": "TC01 Login Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "5fec86fc-f5ab-40e0-9a80-efdda69e50af",
+              "title": "TC01001 - Login User (Valid Data)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan login dan diarahkan ke halaman beranda",
+                  "fullTitle": "TC01 Login Page Tests TC01001 - Login User (Valid Data) User berhasil melakukan login dan diarahkan ke halaman beranda",
+                  "timedOut": null,
+                  "duration": 26448,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.validLogin;\nloginPage.login(email, password);\nloginPage.verifyLoginSuccess();",
+                  "err": {},
+                  "uuid": "1abf7df8-c34c-44bc-a52d-685a89c87888",
+                  "parentUUID": "5fec86fc-f5ab-40e0-9a80-efdda69e50af",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1abf7df8-c34c-44bc-a52d-685a89c87888"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 26448,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d5d1e295-e44a-416c-b595-c468806b0878",
+              "title": "TC01002 - Login User Email Kapital",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan login dengan email kapital dan diarahkan ke halaman beranda",
+                  "fullTitle": "TC01 Login Page Tests TC01002 - Login User Email Kapital User berhasil melakukan login dengan email kapital dan diarahkan ke halaman beranda",
+                  "timedOut": null,
+                  "duration": 5907,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.capitalizedEmail;\nloginPage.login(email, password);\nloginPage.verifyLoginSuccess();",
+                  "err": {},
+                  "uuid": "6e224f1f-cc82-411d-9f5f-fbe13e1e69b8",
+                  "parentUUID": "d5d1e295-e44a-416c-b595-c468806b0878",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6e224f1f-cc82-411d-9f5f-fbe13e1e69b8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5907,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9b7bb952-09a2-4ead-9554-84660bf94ae5",
+              "title": "TC01003 - Login User Email Tidak Terdaftar",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan login dengan email tidak terdaftar dan menampilkan pesan error",
+                  "fullTitle": "TC01 Login Page Tests TC01003 - Login User Email Tidak Terdaftar User gagal melakukan login dengan email tidak terdaftar dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 2361,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.unregisteredEmail;\nloginPage.login(email, password);\nloginPage.verifyInvalidCredentialsErrorMessage();",
+                  "err": {},
+                  "uuid": "ba95518e-1ffa-4cbe-8169-9d1090b5e88c",
+                  "parentUUID": "9b7bb952-09a2-4ead-9554-84660bf94ae5",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ba95518e-1ffa-4cbe-8169-9d1090b5e88c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2361,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e27a6aba-ccd0-40b6-add8-e30442033062",
+              "title": "TC01004 - Login User Email Tidak Valid",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan login dengan format email tidak valid (tanpa @) dan menampilkan pesan error",
+                  "fullTitle": "TC01 Login Page Tests TC01004 - Login User Email Tidak Valid User gagal melakukan login dengan format email tidak valid (tanpa @) dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 1742,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.invalidEmailFormat;\nloginPage.login(email, password);\nloginPage.verifyInvalidCredentialsErrorMessage();",
+                  "err": {},
+                  "uuid": "bcac4c37-efe7-4937-b1ea-a5224be3c80d",
+                  "parentUUID": "e27a6aba-ccd0-40b6-add8-e30442033062",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bcac4c37-efe7-4937-b1ea-a5224be3c80d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1742,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2bc63a2c-049c-40d9-8ca5-f1b810258cab",
+              "title": "TC01005 - Login User Form Kosong",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan login dengan form kosong dan menampilkan pesan error untuk email dan password",
+                  "fullTitle": "TC01 Login Page Tests TC01005 - Login User Form Kosong User gagal melakukan login dengan form kosong dan menampilkan pesan error untuk email dan password",
+                  "timedOut": null,
+                  "duration": 507,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.emptyData;\nloginPage.login(email, password);\nloginPage.verifyEmailErrorMessage();\nloginPage.verifyPasswordErrorMessage();",
+                  "err": {},
+                  "uuid": "abec71f5-2238-4648-b197-a6b9343cdb97",
+                  "parentUUID": "2bc63a2c-049c-40d9-8ca5-f1b810258cab",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "abec71f5-2238-4648-b197-a6b9343cdb97"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 507,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "60f5d0c2-5181-47ce-aef8-51b8a9d52391",
+              "title": "TC01006 - Login User Password 250 Karakter",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan login dengan Password 250 Karakter dan menampilkan pesan error",
+                  "fullTitle": "TC01 Login Page Tests TC01006 - Login User Password 250 Karakter User gagal melakukan login dengan Password 250 Karakter dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 8147,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.manyPasswordCharacters;\nloginPage.login(email, password);\nloginPage.verifyPasswordLengthErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Password must be at least 6 characters long' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Password must be at least 6 characters long' but never did.\n    at LoginPage.verifyPasswordLengthErrorMessage (webpack:///./cypress/support/POM/LoginPage.js:107:40)\n    at Context.eval (webpack:///./cypress/e2e/TC01/loginPage.cy.js:63:22)",
+                    "diff": null
+                  },
+                  "uuid": "c113648b-13e6-459c-a249-11b45e12350e",
+                  "parentUUID": "60f5d0c2-5181-47ce-aef8-51b8a9d52391",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "c113648b-13e6-459c-a249-11b45e12350e"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 8147,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e850a219-3680-4a1e-8f23-f2fa0e47f871",
+              "title": "TC01007 - Button Validation Checking",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Semua button dapat berfungsi sebagaimana mestinya",
+                  "fullTitle": "TC01 Login Page Tests TC01007 - Button Validation Checking Semua button dapat berfungsi sebagaimana mestinya",
+                  "timedOut": null,
+                  "duration": 3523,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "loginPage.mutePassword();\nloginPage.mutePassword();\nloginPage.createAccount();\ncy.url().should('include', '/account/register');\nloginPage.visit();\nloginPage.forgotPassword();\ncy.url().should('include', '/account/reset-password');\nloginPage.visit();\nloginPage.breadcrumbHome();\ncy.url().should('eq', `${Cypress.config().baseUrl}/`);",
+                  "err": {},
+                  "uuid": "37d847a9-b1a5-44a3-a962-b71893bd851a",
+                  "parentUUID": "e850a219-3680-4a1e-8f23-f2fa0e47f871",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "37d847a9-b1a5-44a3-a962-b71893bd851a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3523,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "9c3b3957-56af-4713-b54e-fb13f9ce0522",
+              "title": "TC01008 - Login User Spam Button Ketika Error",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Button Sign In di Block dan menampilkan pesan Please Try Again Later",
+                  "fullTitle": "TC01 Login Page Tests TC01008 - Login User Spam Button Ketika Error Button Sign In di Block dan menampilkan pesan Please Try Again Later",
+                  "timedOut": null,
+                  "duration": 10311,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.unregisteredEmail;\nfor (let i = 0; i < 5; i++) {\n  loginPage.login(email, password);\n}\nloginPage.verifySpamLoginButton();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many login attempts. Please try again later.' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many login attempts. Please try again later.' but never did.\n    at LoginPage.verifySpamLoginButton (webpack:///./cypress/support/POM/LoginPage.js:115:30)\n    at Context.eval (webpack:///./cypress/e2e/TC01/loginPage.cy.js:88:22)",
+                    "diff": null
+                  },
+                  "uuid": "570edfc3-b77b-4073-9248-b7c69aa18c4d",
+                  "parentUUID": "9c3b3957-56af-4713-b54e-fb13f9ce0522",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "570edfc3-b77b-4073-9248-b7c69aa18c4d"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10311,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f38ed17e-15be-459a-a9ff-43927284ab6b",
+              "title": "TC01009 - Login User Password Dibawah Minimum Karakter",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan login dengan Password dibawah minimum karakter dan menampilkan pesan error",
+                  "fullTitle": "TC01 Login Page Tests TC01009 - Login User Password Dibawah Minimum Karakter User gagal melakukan login dengan Password dibawah minimum karakter dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 5659,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email,\n  password\n} = loginData.belowMinimumPasswordCharacters;\nloginPage.login(email, password);\nloginPage.verifyPasswordLengthErrorMessage();",
+                  "err": {},
+                  "uuid": "0e00cb04-a96e-47b6-8c52-a4cc785fd4f0",
+                  "parentUUID": "f38ed17e-15be-459a-a9ff-43927284ab6b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "0e00cb04-a96e-47b6-8c52-a4cc785fd4f0"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5659,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

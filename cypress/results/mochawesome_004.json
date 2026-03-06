@@ -1,0 +1,284 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-03-06T06:20:34.915Z",
+    "end": "2026-03-06T06:24:21.578Z",
+    "duration": 226663,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ed28e9b1-1579-4010-ba55-335594265756",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC07\\myAccountPage.cy.js",
+      "file": "cypress\\e2e\\TC07\\myAccountPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "889acd43-9daa-49be-82ff-2c1f67ecdd0a",
+          "title": "TC07 - My Account Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9df7eaef-6068-4460-9629-aa689bae06a7",
+              "title": "TC07001 - Add New Address",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User dapat menambahkan alamat baru di My Account",
+                  "fullTitle": "TC07 - My Account Page Tests TC07001 - Add New Address User dapat menambahkan alamat baru di My Account",
+                  "timedOut": null,
+                  "duration": 26700,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode\n} = addressData.validAddressData;\nmyAccountPage.addNewAddress.click();\nmyAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\nmyAccountPage.clickSetAsDefault();\nmyAccountPage.verifySetAsDefaultChecked();\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyAddAddressSuccess();",
+                  "err": {},
+                  "uuid": "f215cdc7-e850-4850-890f-62a7440e83b5",
+                  "parentUUID": "9df7eaef-6068-4460-9629-aa689bae06a7",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "f215cdc7-e850-4850-890f-62a7440e83b5"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 26700,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "52d31a75-bf4b-4df9-b5a0-d8a53e2c15a4",
+              "title": "TC07002 - Logout Button",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User dapat logout dari My Account",
+                  "fullTitle": "TC07 - My Account Page Tests TC07002 - Logout Button User dapat logout dari My Account",
+                  "timedOut": null,
+                  "duration": 9717,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "myAccountPage.clickLogout();\ncy.url().should('not.include', '/account');",
+                  "err": {},
+                  "uuid": "06529e69-7b26-4a80-8d3d-c74782aa67e1",
+                  "parentUUID": "52d31a75-bf4b-4df9-b5a0-d8a53e2c15a4",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "06529e69-7b26-4a80-8d3d-c74782aa67e1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9717,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c203e04d-a93d-4be0-8a5e-c4262cfbd225",
+              "title": "TC07003 - Add New Address with Empty Fields",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User tidak dapat menambahkan alamat baru dengan field kosong",
+                  "fullTitle": "TC07 - My Account Page Tests TC07003 - Add New Address with Empty Fields User tidak dapat menambahkan alamat baru dengan field kosong",
+                  "timedOut": null,
+                  "duration": 21384,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "myAccountPage.clickAddNewAddress();\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyEmptyAddressErrorMessage();",
+                  "err": {},
+                  "uuid": "16e01b0c-51c8-4022-9722-31f9d520de84",
+                  "parentUUID": "c203e04d-a93d-4be0-8a5e-c4262cfbd225",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "16e01b0c-51c8-4022-9722-31f9d520de84"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 21384,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "fdbe065c-dadb-40b5-8e3e-8f815232c02d",
+              "title": "TC07004 - Add New Address 250 Characters",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User tidak dapat menambahkan alamat baru dengan field lebih dari 250 karakter",
+                  "fullTitle": "TC07 - My Account Page Tests TC07004 - Add New Address 250 Characters User tidak dapat menambahkan alamat baru dengan field lebih dari 250 karakter",
+                  "timedOut": null,
+                  "duration": 42143,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode\n} = addressData.manyCharactersAddressData;\nmyAccountPage.clickAddNewAddress();\nmyAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyInvalidAddressErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Full name must be less than 250 characters, Address must be less than 250 characters, Address 2 must be less than 250 characters, City must be less than 250 characters' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Full name must be less than 250 characters, Address must be less than 250 characters, Address 2 must be less than 250 characters, City must be less than 250 characters' but never did.\n    at MyAccount.verifyInvalidAddressErrorMessage (webpack:///./cypress/support/POM/MyAccountPage.js:139:191)\n    at Context.eval (webpack:///./cypress/e2e/TC07/myAccountPage.cy.js:61:26)",
+                    "diff": null
+                  },
+                  "uuid": "37e8be9d-9423-41f2-84bc-45b45e7bbf60",
+                  "parentUUID": "fdbe065c-dadb-40b5-8e3e-8f815232c02d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "37e8be9d-9423-41f2-84bc-45b45e7bbf60"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 42143,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "7eacfabf-328e-4575-82d1-8d4e7e2d8bbe",
+              "title": "TC07005 - Edit Address tidak menimpa Default Address",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Default address tidak tertimpa ketika user mengedit address lain tanpa set as default",
+                  "fullTitle": "TC07 - My Account Page Tests TC07005 - Edit Address tidak menimpa Default Address Default address tidak tertimpa ketika user mengedit address lain tanpa set as default",
+                  "timedOut": null,
+                  "duration": 125460,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode\n} = addressData.validAddressData;\nconst {\n  fullName: defFullName,\n  telephone: defTelephone,\n  address: defAddress,\n  address2: defAddress2,\n  city: defCity,\n  country: defCountry,\n  province: defProvince,\n  postalCode: defPostalCode\n} = addressData.defaultAddressData;\nmyAccountPage.addNewAddress.click();\nmyAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyAddAddressSuccess();\nmyAccountPage.visit();\nmyAccountPage.addNewAddress.click();\nmyAccountPage.fillAddressForm(defFullName, defTelephone, defAddress, defAddress2, defCity, defCountry, defProvince, defPostalCode);\nmyAccountPage.clickSetAsDefault();\nmyAccountPage.verifySetAsDefaultChecked();\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyAddAddressSuccess();\nmyAccountPage.visit();\nmyAccountPage.clickEditAddress();\nmyAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\nmyAccountPage.clickSaveAddress();\nmyAccountPage.verifyEditAddressSuccess();\nmyAccountPage.verifyDefaultAddressIs(defFullName);",
+                  "err": {},
+                  "uuid": "5ca80086-e71c-4110-b010-f326e6b36804",
+                  "parentUUID": "7eacfabf-328e-4575-82d1-8d4e7e2d8bbe",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5ca80086-e71c-4110-b010-f326e6b36804"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 125460,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

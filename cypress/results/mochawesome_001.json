@@ -1,0 +1,444 @@
+{
+  "stats": {
+    "suites": 10,
+    "tests": 9,
+    "passes": 7,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-03-06T06:18:38.174Z",
+    "end": "2026-03-06T06:19:31.097Z",
+    "duration": 52923,
+    "testsRegistered": 9,
+    "passPercent": 77.77777777777779,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4dc10348-3dbd-40ae-aab9-591f6068d3bd",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC03\\registerPage.cy.js",
+      "file": "cypress\\e2e\\TC03\\registerPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b85b7f2-2d23-4e81-ba04-e8d681d70866",
+          "title": "TC03 Register Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "f54dfbf0-d68b-46a6-8a29-4eb7d206d5ef",
+              "title": "TC03001 - Register User (Valid Data)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan registrasi dengan data valid dan diarahkan ke halaman beranda",
+                  "fullTitle": "TC03 Register Page Tests TC03001 - Register User (Valid Data) User berhasil melakukan registrasi dengan data valid dan diarahkan ke halaman beranda",
+                  "timedOut": null,
+                  "duration": 9405,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.validRegister;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyRegistrationSuccess();",
+                  "err": {},
+                  "uuid": "3b1dffc3-c121-4221-b3e6-dbe280e1a12a",
+                  "parentUUID": "f54dfbf0-d68b-46a6-8a29-4eb7d206d5ef",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "3b1dffc3-c121-4221-b3e6-dbe280e1a12a"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9405,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "0fafb379-a053-45ae-91b5-b6ac03355c3b",
+              "title": "TC03002 - Register User with capitalized Full Name and Email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan registrasi dengan nama lengkap dan email kapital dan diarahkan ke halaman beranda",
+                  "fullTitle": "TC03 Register Page Tests TC03002 - Register User with capitalized Full Name and Email User berhasil melakukan registrasi dengan nama lengkap dan email kapital dan diarahkan ke halaman beranda",
+                  "timedOut": null,
+                  "duration": 7686,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.capitalizedData;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyRegistrationSuccess();",
+                  "err": {},
+                  "uuid": "97d5884d-5886-41ef-8e9e-5df2009638bd",
+                  "parentUUID": "0fafb379-a053-45ae-91b5-b6ac03355c3b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "97d5884d-5886-41ef-8e9e-5df2009638bd"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7686,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d06d3a6a-6de0-4d8d-bf4d-032080d203e1",
+              "title": "TC03003 - Register User with Registered Email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan registrasi dengan email yang sudah terdaftar dan menampilkan pesan error",
+                  "fullTitle": "TC03 Register Page Tests TC03003 - Register User with Registered Email User gagal melakukan registrasi dengan email yang sudah terdaftar dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 2703,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.registeredEmail;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyEmailAlreadyRegisteredErrorMessage();",
+                  "err": {},
+                  "uuid": "5553465d-3fdd-4285-bbe0-5b9e9b2889ae",
+                  "parentUUID": "d06d3a6a-6de0-4d8d-bf4d-032080d203e1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5553465d-3fdd-4285-bbe0-5b9e9b2889ae"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2703,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d77b57cc-5d1d-4697-894b-33cec522fe36",
+              "title": "TC03004 - Register User with Invalid Email Format",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan registrasi dengan format email tidak valid dan menampilkan pesan error",
+                  "fullTitle": "TC03 Register Page Tests TC03004 - Register User with Invalid Email Format User gagal melakukan registrasi dengan format email tidak valid dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 1821,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.invalidEmailFormat;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyEmailInvalidErrorMessage();",
+                  "err": {},
+                  "uuid": "98516faf-426f-4540-baf0-7b1d07f06e04",
+                  "parentUUID": "d77b57cc-5d1d-4697-894b-33cec522fe36",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "98516faf-426f-4540-baf0-7b1d07f06e04"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1821,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "73a22550-411c-4227-830c-1ddf7ae1b223",
+              "title": "TC03005 - Register User with Empty Form",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan registrasi dengan form kosong dan menampilkan pesan error untuk setiap field",
+                  "fullTitle": "TC03 Register Page Tests TC03005 - Register User with Empty Form User gagal melakukan registrasi dengan form kosong dan menampilkan pesan error untuk setiap field",
+                  "timedOut": null,
+                  "duration": 512,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.emptyData;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyFullNameRequiredErrorMessage();\nregisterPage.verifyEmailRequiredErrorMessage();\nregisterPage.verifyPasswordRequiredErrorMessage();",
+                  "err": {},
+                  "uuid": "a9f72eb1-3aaf-46b6-80a8-85467e8d90a1",
+                  "parentUUID": "73a22550-411c-4227-830c-1ddf7ae1b223",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a9f72eb1-3aaf-46b6-80a8-85467e8d90a1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 512,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "22dcb214-a46a-45f1-8e55-ea91c9c84a67",
+              "title": "TC03006 - Register User with 250 Characters Data",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan registrasi dengan data 250 karakter dan menampilkan pesan error untuk setiap field",
+                  "fullTitle": "TC03 Register Page Tests TC03006 - Register User with 250 Characters Data User gagal melakukan registrasi dengan data 250 karakter dan menampilkan pesan error untuk setiap field",
+                  "timedOut": null,
+                  "duration": 11826,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.manyDataCharacters;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyFullNameLengthErrorMessage();\nregisterPage.verifyPasswordLengthErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Full Name must be maximal 20 characters long' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Full Name must be maximal 20 characters long' but never did.\n    at RegisterPage.verifyFullNameLengthErrorMessage (webpack:///./cypress/support/POM/RegisterPage.js:134:40)\n    at Context.eval (webpack:///./cypress/e2e/TC03/registerPage.cy.js:67:25)",
+                    "diff": null
+                  },
+                  "uuid": "4ace6fce-cebe-4076-af34-003e9425e4f9",
+                  "parentUUID": "22dcb214-a46a-45f1-8e55-ea91c9c84a67",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "4ace6fce-cebe-4076-af34-003e9425e4f9"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 11826,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "61ddb42d-9f7f-4da5-9ec8-2b97321049f0",
+              "title": "TC03007 - Register User Button Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Semua button dapat berfungsi sebagaimana mestinya",
+                  "fullTitle": "TC03 Register Page Tests TC03007 - Register User Button Validation Semua button dapat berfungsi sebagaimana mestinya",
+                  "timedOut": null,
+                  "duration": 3218,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registerPage.mutePassword();\nregisterPage.mutePassword();\nregisterPage.breadcrumbHome();\nregisterPage.visit();\nregisterPage.loginLinkButton();\nregisterPage.visit();",
+                  "err": {},
+                  "uuid": "5842bc5d-b6b9-4310-ad00-c137e3c97cac",
+                  "parentUUID": "61ddb42d-9f7f-4da5-9ec8-2b97321049f0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5842bc5d-b6b9-4310-ad00-c137e3c97cac"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3218,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c2407cec-d585-4b61-ba85-54a34c8b7d58",
+              "title": "TC03008 - Register User Spam Button",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Melakukan Spaming register button lebih dari 5 kali dan menampilkan pesan error",
+                  "fullTitle": "TC03 Register Page Tests TC03008 - Register User Spam Button Melakukan Spaming register button lebih dari 5 kali dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 12597,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.registeredEmail;\nfor (let i = 0; i < 5; i++) {\n  registerPage.register(fullName, email, password);\n}\nregisterPage.verifyRegistrationSpamErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many registration attempts. Please try again later.' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many registration attempts. Please try again later.' but never did.\n    at RegisterPage.verifyRegistrationSpamErrorMessage (webpack:///./cypress/support/POM/RegisterPage.js:138:30)\n    at Context.eval (webpack:///./cypress/e2e/TC03/registerPage.cy.js:89:25)",
+                    "diff": null
+                  },
+                  "uuid": "0e1c0609-26a8-4937-a0bd-145ecac82175",
+                  "parentUUID": "c2407cec-d585-4b61-ba85-54a34c8b7d58",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "0e1c0609-26a8-4937-a0bd-145ecac82175"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12597,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c7ccb5da-df40-410d-b35f-c45f2b0887d1",
+              "title": "TC03009 - Register User with Password Below Minimum Characters",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan registrasi dengan password dibawah minimum karakter dan menampilkan pesan error",
+                  "fullTitle": "TC03 Register Page Tests TC03009 - Register User with Password Below Minimum Characters User gagal melakukan registrasi dengan password dibawah minimum karakter dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 1993,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  email,\n  password\n} = registerData.belowMinimumPasswordCharacters;\nregisterPage.register(fullName, email, password);\nregisterPage.verifyPasswordLengthErrorMessage();",
+                  "err": {},
+                  "uuid": "b92f29e4-124e-4865-bcbf-7b4adeda875d",
+                  "parentUUID": "c7ccb5da-df40-410d-b35f-c45f2b0887d1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b92f29e4-124e-4865-bcbf-7b4adeda875d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1993,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

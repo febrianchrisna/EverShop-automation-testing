@@ -1,0 +1,331 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "start": "2026-03-06T06:19:32.709Z",
+    "end": "2026-03-06T06:19:58.432Z",
+    "duration": 25723,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5735a681-c669-4ad2-a319-97c241d88911",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC02\\forgotPasswordPage.cy.js",
+      "file": "cypress\\e2e\\TC02\\forgotPasswordPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a528271-56a8-4407-82e6-0516cb033372",
+          "title": "TC02 Forgot Password Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b42b3ac7-a9f9-4453-ae85-342e2080c178",
+              "title": "TC02001 - Reset Password with Valid Email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan reset password dengan email valid dan menampilkan pesan sukses",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02001 - Reset Password with Valid Email User berhasil melakukan reset password dengan email valid dan menampilkan pesan sukses",
+                  "timedOut": null,
+                  "duration": 7771,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email\n} = resetData.validLogin;\nforgotPassPage.resetPassword(email);\nforgotPassPage.verifyResetPasswordSuccess();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'If there is an account associated with' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'If there is an account associated with' but never did.\n    at ForgotPassPage.verifyResetPasswordSuccess (webpack:///./cypress/support/POM/ForgotPassPage.js:39:62)\n    at Context.eval (webpack:///./cypress/e2e/TC02/forgotPasswordPage.cy.js:22:27)",
+                    "diff": null
+                  },
+                  "uuid": "037691af-32cb-4d3e-a50d-9dde569e4d95",
+                  "parentUUID": "b42b3ac7-a9f9-4453-ae85-342e2080c178",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "037691af-32cb-4d3e-a50d-9dde569e4d95"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 7771,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "83abf761-4919-4a32-af28-caf7f4e363d3",
+              "title": "TC02002 - Reset Password with Unregistered Email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan reset password dengan email tidak terdaftar dan menampilkan pesan error",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02002 - Reset Password with Unregistered Email User gagal melakukan reset password dengan email tidak terdaftar dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 5368,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email\n} = resetData.unregisteredEmail;\nforgotPassPage.resetPassword(email);\nforgotPassPage.verifyInvalidEmailErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Please enter a valid email address' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Please enter a valid email address' but never did.\n    at ForgotPassPage.verifyInvalidEmailErrorMessage (webpack:///./cypress/support/POM/ForgotPassPage.js:43:58)\n    at Context.eval (webpack:///./cypress/e2e/TC02/forgotPasswordPage.cy.js:30:27)",
+                    "diff": null
+                  },
+                  "uuid": "a502e28f-7e1b-46f1-85cf-54d4733451ad",
+                  "parentUUID": "83abf761-4919-4a32-af28-caf7f4e363d3",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "a502e28f-7e1b-46f1-85cf-54d4733451ad"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 5368,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f49d44b1-34fe-4939-a66e-b337bc7f180b",
+              "title": "TC02003 - Reset Password with Invalid Email Format",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan reset password dengan format email tidak valid dan menampilkan pesan error",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02003 - Reset Password with Invalid Email Format User gagal melakukan reset password dengan format email tidak valid dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 1396,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email\n} = resetData.invalidEmailFormat;\nforgotPassPage.resetPassword(email);\nforgotPassPage.verifyInvalidEmailErrorMessage();",
+                  "err": {},
+                  "uuid": "b00b61a4-67ca-4b32-86a1-1425b6369e4b",
+                  "parentUUID": "f49d44b1-34fe-4939-a66e-b337bc7f180b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b00b61a4-67ca-4b32-86a1-1425b6369e4b"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1396,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ba5f0d02-928e-4d94-ab22-4d48be48175a",
+              "title": "TC02004 - Reset Password with Empty Email",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan reset password dengan form kosong dan menampilkan pesan error",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02004 - Reset Password with Empty Email User gagal melakukan reset password dengan form kosong dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 859,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email\n} = resetData.emptyData;\nforgotPassPage.resetPassword(email);\nforgotPassPage.verifyEmailRequiredErrorMessage();",
+                  "err": {},
+                  "uuid": "71a7328c-0a25-4572-96ab-44b873c87a44",
+                  "parentUUID": "ba5f0d02-928e-4d94-ab22-4d48be48175a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "71a7328c-0a25-4572-96ab-44b873c87a44"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 859,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a991b309-ba27-4908-90eb-d3aa301a6915",
+              "title": "TC02005 - Reset Password Spam Button",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Melakukan Spaming reset button lebih dari 5 kali dan menampilkan pesan error",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02005 - Reset Password Spam Button Melakukan Spaming reset button lebih dari 5 kali dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 8303,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  email\n} = resetData.unregisteredEmail;\nfor (let i = 0; i < 5; i++) {\n  forgotPassPage.resetPassword(email);\n}\nforgotPassPage.verifyResetPasswordSpamErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many attemps, Please try again later' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Too many attemps, Please try again later' but never did.\n    at ForgotPassPage.verifyResetPasswordSpamErrorMessage (webpack:///./cypress/support/POM/ForgotPassPage.js:51:64)\n    at Context.eval (webpack:///./cypress/e2e/TC02/forgotPasswordPage.cy.js:56:27)",
+                    "diff": null
+                  },
+                  "uuid": "5b3ffa52-e8e9-441e-90a4-474761622efe",
+                  "parentUUID": "a991b309-ba27-4908-90eb-d3aa301a6915",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "5b3ffa52-e8e9-441e-90a4-474761622efe"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 8303,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "48fed1c7-4d14-4f4d-bdd1-b30223a20232",
+              "title": "TC02006 - Button Breadcrumb Home",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil diarahkan ke halaman beranda ketika mengklik tombol breadcrumb Home",
+                  "fullTitle": "TC02 Forgot Password Page Tests TC02006 - Button Breadcrumb Home User berhasil diarahkan ke halaman beranda ketika mengklik tombol breadcrumb Home",
+                  "timedOut": null,
+                  "duration": 1737,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "forgotPassPage.breadcrumbHomeLink.click();\ncy.url().should('eq', `${Cypress.config().baseUrl}/`);",
+                  "err": {},
+                  "uuid": "a1f32ddd-90fd-4b2f-bc65-d20cc28aaa78",
+                  "parentUUID": "48fed1c7-4d14-4f4d-bdd1-b30223a20232",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a1f32ddd-90fd-4b2f-bc65-d20cc28aaa78"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1737,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

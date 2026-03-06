@@ -1,0 +1,554 @@
+{
+  "stats": {
+    "suites": 12,
+    "tests": 11,
+    "passes": 1,
+    "pending": 0,
+    "failures": 10,
+    "start": "2026-03-06T06:24:50.657Z",
+    "end": "2026-03-06T06:27:25.945Z",
+    "duration": 155288,
+    "testsRegistered": 11,
+    "passPercent": 9.090909090909092,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00987d4b-1d64-4e50-8994-4a754c07ec96",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TC04\\checkoutRegistered.cy.js",
+      "file": "cypress\\e2e\\TC04\\checkoutRegistered.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a48e987-3663-4509-80a6-b70423477f53",
+          "title": "TC04 Checkout Registered User Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "121efefb-5b3b-40c1-855c-c4b2d7b54431",
+              "title": "TC04001 - Checkout with Registered User",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan checkout dengan data valid dan diarahkan ke halaman konfirmasi",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04001 - Checkout with Registered User User berhasil melakukan checkout dengan data valid dan diarahkan ke halaman konfirmasi",
+                  "timedOut": null,
+                  "duration": 25106,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod\n} = checkoutData.validShippingAddressData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyOrderSuccess();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"field-shippingAddress.full_name\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"field-shippingAddress.full_name\"]`, but never found it.\n    at get fullNameField (webpack:///./cypress/support/POM/Checkout.js:27:18)\n    at Checkout.fillShippingAddressForm (webpack:///./cypress/support/POM/Checkout.js:250:27)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:28:31)",
+                    "diff": null
+                  },
+                  "uuid": "37bf8368-4372-4410-933e-4464f80c81c7",
+                  "parentUUID": "121efefb-5b3b-40c1-855c-c4b2d7b54431",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "37bf8368-4372-4410-933e-4464f80c81c7"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 25106,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "835d1d11-e6d3-4a28-bf30-7daacafebb68",
+              "title": "TC04002 - Checkout with Different Billing Address",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan checkout dengan billing address berbeda dari shipping address",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04002 - Checkout with Different Billing Address User berhasil melakukan checkout dengan billing address berbeda dari shipping address",
+                  "timedOut": null,
+                  "duration": 18111,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  billingFullName,\n  billingTelephone,\n  billingAddress,\n  billingAddress2,\n  billingCity,\n  billingCountry,\n  billingProvince,\n  billingPostalCode,\n  paymentMethod\n} = checkoutData.differentBillingData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.fillBillingForm(billingFullName, billingTelephone, billingAddress, billingAddress2, billingCity, billingCountry, billingProvince, billingPostalCode);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyOrderSuccess();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"field-shippingAddress.full_name\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=\"field-shippingAddress.full_name\"]`, but never found it.\n    at get fullNameField (webpack:///./cypress/support/POM/Checkout.js:27:18)\n    at Checkout.fillShippingAddressForm (webpack:///./cypress/support/POM/Checkout.js:250:27)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:48:31)",
+                    "diff": null
+                  },
+                  "uuid": "6c2e1ba7-7f45-4d3f-80fb-46e10fc54f97",
+                  "parentUUID": "835d1d11-e6d3-4a28-bf30-7daacafebb68",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "6c2e1ba7-7f45-4d3f-80fb-46e10fc54f97"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 18111,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "12b456aa-2426-499a-8be8-98c63ba3c100",
+              "title": "TC04003 - Checkout with overstock Quantity",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan quantity melebihi stok yang tersedia dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04003 - Checkout with overstock Quantity User gagal melakukan checkout dengan quantity melebihi stok yang tersedia dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 14971,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  color,\n  quantity\n} = checkoutData.overStockQuantity;\ncheckoutRegistered.itemDetails();\ncheckoutRegistered.itemDetailsColor(color);\ncheckoutRegistered.fillItemQuantity(quantity);\ncheckoutRegistered.itemDetailsAddToCart();\ncheckoutRegistered.verifyItemQuantityInvalidStockErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Yellow' within the selector: '.variant-option-list li' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Yellow' within the selector: '.variant-option-list li' but never did.\n    at Checkout.itemDetailsColor (webpack:///./cypress/support/POM/Checkout.js:206:58)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:62:31)",
+                    "diff": null
+                  },
+                  "uuid": "ebd683d9-8e5b-468f-9b4e-f822726c268b",
+                  "parentUUID": "12b456aa-2426-499a-8be8-98c63ba3c100",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "ebd683d9-8e5b-468f-9b4e-f822726c268b"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 14971,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8f525d59-2aaa-4233-80f0-581b8fa926e8",
+              "title": "TC04004 - Checkout with Empty Color and Quantity Field",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan mengkosongkan field Color dan Quantity dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04004 - Checkout with Empty Color and Quantity Field User gagal melakukan checkout dengan mengkosongkan field Color dan Quantity dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 9460,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  color,\n  quantity\n} = checkoutData.emptyData;\ncheckoutRegistered.itemDetails();\ncheckoutRegistered.itemDetailsColor(color);\ncheckoutRegistered.fillItemQuantity(quantity);\ncheckoutRegistered.itemDetailsAddToCart();\ncheckoutRegistered.verifyItemColorErrorMessage();\ncheckoutRegistered.verifyItemQuantityEmptyErrorMessage();",
+                  "err": {},
+                  "uuid": "1d29b8aa-5f2c-44d2-abd4-881d253c33c1",
+                  "parentUUID": "8f525d59-2aaa-4233-80f0-581b8fa926e8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1d29b8aa-5f2c-44d2-abd4-881d253c33c1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 9460,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6b20ec19-90db-45f9-a048-3c089c9d3c93",
+              "title": "TC04005 - Checkout with Empty Shipping Address",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan mengkosongkan field Shipping Address dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04005 - Checkout with Empty Shipping Address User gagal melakukan checkout dengan mengkosongkan field Shipping Address dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 18560,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  paymentMethod\n} = checkoutData.emptyCheckoutData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyAllAddressFieldsErrorMessage();\ncheckoutRegistered.verifyExpressShippingMethodErrorMessage();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div > div.checkout__payment > div.ring-foreground\\/10`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div > div.checkout__payment > div.ring-foreground\\/10`, but never found it.\n    at get paymentMethodContainer (webpack:///./cypress/support/POM/Checkout.js:135:18)\n    at Checkout.selectPaymentMethod (webpack:///./cypress/support/POM/Checkout.js:320:17)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:87:31)",
+                    "diff": null
+                  },
+                  "uuid": "29b0610e-3298-42e7-aca4-b7d2c70ee5de",
+                  "parentUUID": "6b20ec19-90db-45f9-a048-3c089c9d3c93",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "29b0610e-3298-42e7-aca4-b7d2c70ee5de"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 18560,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a1265410-343e-417a-bd10-2afa0dc41356",
+              "title": "TC04006 - Checkout with Re-Login at Checkout Form",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan checkout dengan login di checkout form",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04006 - Checkout with Re-Login at Checkout Form User berhasil melakukan checkout dengan login di checkout form",
+                  "timedOut": null,
+                  "duration": 12030,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod\n} = checkoutData.validShippingAddressData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.checkoutLogout();\ncheckoutRegistered.checkoutLoginLink();\ncheckoutRegistered.loginAtCheckout(loginData.validLogin.email, loginData.validLogin.password);\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyOrderSuccess();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:99:31)",
+                    "diff": null
+                  },
+                  "uuid": "cfb08624-0a37-49c1-b0a8-c4acaba5f7a0",
+                  "parentUUID": "a1265410-343e-417a-bd10-2afa0dc41356",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "cfb08624-0a37-49c1-b0a8-c4acaba5f7a0"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12030,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "8f1f57b0-2348-44f0-9e47-704f31369723",
+              "title": "TC04007 - Checkout with 250 Characters in All Mandatory Fields",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan mengisi semua mandatory field 250 karakter dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04007 - Checkout with 250 Characters in All Mandatory Fields User gagal melakukan checkout dengan mengisi semua mandatory field 250 karakter dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 12057,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod\n} = checkoutData.manyCharactersCheckoutData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyOrderFailedError();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:117:31)",
+                    "diff": null
+                  },
+                  "uuid": "8d10932f-2fcb-48fd-8fc8-ed2fae232af1",
+                  "parentUUID": "8f1f57b0-2348-44f0-9e47-704f31369723",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "8d10932f-2fcb-48fd-8fc8-ed2fae232af1"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12057,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "becfcd8a-f304-4be7-a11c-b3f289d6bb10",
+              "title": "TC04008 - Checkout with Valid VISA Credit Card Payment",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan checkout dengan payment method VISA credit card dan data valid",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04008 - Checkout with Valid VISA Credit Card Payment User berhasil melakukan checkout dengan payment method VISA credit card dan data valid",
+                  "timedOut": null,
+                  "duration": 10475,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod,\n  cardTab,\n  cardNumber,\n  cardExpiry,\n  cardCvc,\n  cardCountry\n} = checkoutData.visaCheckoutData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.fillCreditCardForm(cardTab, cardNumber, cardExpiry, cardCvc, cardCountry);\ncheckoutRegistered.placeOrder();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:132:31)",
+                    "diff": null
+                  },
+                  "uuid": "af7c8f46-0874-4933-a911-5c7f5bf95516",
+                  "parentUUID": "becfcd8a-f304-4be7-a11c-b3f289d6bb10",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "af7c8f46-0874-4933-a911-5c7f5bf95516"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10475,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "90ccecf4-cb91-442e-b6d6-3ba20742d7f6",
+              "title": "TC04009 - Checkout with Insufficient Funds Credit Card",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan credit card saldo tidak cukup dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04009 - Checkout with Insufficient Funds Credit Card User gagal melakukan checkout dengan credit card saldo tidak cukup dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 10562,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod,\n  cardTab,\n  cardNumber,\n  cardExpiry,\n  cardCvc,\n  cardCountry\n} = checkoutData.insufficientFundsCardData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.fillCreditCardForm(cardTab, cardNumber, cardExpiry, cardCvc, cardCountry);\ncheckoutRegistered.placeOrder();\ncheckoutRegistered.verifyOrderFailedError();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:148:31)",
+                    "diff": null
+                  },
+                  "uuid": "9a118d03-b0e5-4e6f-8f3b-11b5aadf7f27",
+                  "parentUUID": "90ccecf4-cb91-442e-b6d6-3ba20742d7f6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "9a118d03-b0e5-4e6f-8f3b-11b5aadf7f27"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 10562,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "ba5489cb-11e8-4a69-9f2b-87cbe20fb432",
+              "title": "TC04010 - Checkout with Invalid Credit Card Format",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User gagal melakukan checkout dengan format credit card tidak valid dan menampilkan pesan error",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04010 - Checkout with Invalid Credit Card Format User gagal melakukan checkout dengan format credit card tidak valid dan menampilkan pesan error",
+                  "timedOut": null,
+                  "duration": 11243,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod,\n  cardTab,\n  cardNumber,\n  cardExpiry,\n  cardCvc,\n  cardCountry\n} = checkoutData.invalidCreditCardData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.fillCreditCardForm(cardTab, cardNumber, cardExpiry, cardCvc, cardCountry);\ncheckoutRegistered.verifyCreditCardNumberInvalidError();\ncheckoutRegistered.verifyCreditCardExpirationPastError();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:165:31)",
+                    "diff": null
+                  },
+                  "uuid": "d408368a-83fb-449e-b8c2-736cad85eab8",
+                  "parentUUID": "ba5489cb-11e8-4a69-9f2b-87cbe20fb432",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "d408368a-83fb-449e-b8c2-736cad85eab8"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 11243,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2c0e0a77-b652-43db-b232-3d9bc05084b8",
+              "title": "TC04011 - Checkout with another Credit card method (amazon pay)",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User berhasil melakukan checkout",
+                  "fullTitle": "TC04 Checkout Registered User Tests TC04011 - Checkout with another Credit card method (amazon pay) User berhasil melakukan checkout",
+                  "timedOut": null,
+                  "duration": 12139,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const {\n  fullName,\n  telephone,\n  address,\n  address2,\n  city,\n  country,\n  province,\n  postalCode,\n  shippingMethod,\n  billingOption,\n  paymentMethod,\n  cardTab\n} = checkoutData.webhookFailedSimulationData;\ncheckoutRegistered.addToCart();\ncheckoutRegistered.checkout();\ncheckoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);\ncheckoutRegistered.selectShippingMethod(shippingMethod);\ncheckoutRegistered.selectBillingOption(billingOption);\ncheckoutRegistered.selectPaymentMethod(paymentMethod);\ncheckoutRegistered.fillCreditCardForm(cardTab);\ncheckoutRegistered.placeOrder();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Checkout' but never did.\n    at get checkoutButton (webpack:///./cypress/support/POM/Checkout.js:7:18)\n    at Checkout.checkout (webpack:///./cypress/support/POM/Checkout.js:228:13)\n    at Context.eval (webpack:///./cypress/e2e/TC04/checkoutRegistered.cy.js:181:31)",
+                    "diff": null
+                  },
+                  "uuid": "7ed4e829-86a3-4518-8b8e-6f744af2bf50",
+                  "parentUUID": "2c0e0a77-b652-43db-b232-3d9bc05084b8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "7ed4e829-86a3-4518-8b8e-6f744af2bf50"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 12139,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

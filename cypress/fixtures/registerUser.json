@@ -1,0 +1,37 @@
+{
+    "validRegister": {
+        "fullName": "Febrian Chrisna",
+        "email": "febriantessting@gmail.com",
+        "password": "tugas123"
+    },
+    "invalidEmailFormat": {
+        "fullName": "Febrian Chrisna",
+        "email": "febriantestingmail.com",
+        "password": "tugas123"
+    },
+    "emptyData": {
+        "fullName": null,
+        "email": null,
+        "password": null
+    },
+    "capitalizedData": {
+        "fullName": "FEBRIAN CHRISNA",
+        "email": "FEBRIANKAPITAL@GMAIL.COM",
+        "password": "tugas123"
+    },
+    "manyDataCharacters": {
+        "fullName": "ThisIsAVeryLongPasswordWith250CharactersThatShouldBeUsedForTestingMaximumLengthValidationInTheRegistrationFormThisPasswordContainsUppercaseLettersLowercaseLettersNumbersAndSpecialCharacters1234567890",
+        "email": "febrianadd@gmail.com",
+        "password": "ThisIsAVeryLongPasswordWith250CharactersThatShouldBeUsedForTestingMaximumLengthValidationInTheRegistrationFormThisPasswordContainsUppercaseLettersLowercaseLettersNumbersAndSpecialCharacters1234567890!@#$%^&*()ThisIsForTestingPurposesOnlyAbcdefghijklm"
+    },
+    "belowMinimumPasswordCharacters": {
+        "fullName": "Febrian Chrisna",
+        "email": "febrianadd@gmail.com",
+        "password": "a"
+    },
+    "registeredEmail": {
+        "fullName": "Febrian Chrisna",
+        "email": "febriankrisna77@gmail.com",
+        "password": "tugas123"
+    }
+}

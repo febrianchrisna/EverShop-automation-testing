@@ -1,0 +1,32 @@
+{
+    "defaultAddressData":{
+        "fullName": "Budi Santoso",
+        "telephone": "009987654321",
+        "address": "Jl. Default Raya No. 999",
+        "address2": "Blok D No. 5",
+        "city": "Surabaya",
+        "country": "United States",
+        "province": "California",
+        "postalCode": "99999"
+    },
+    "validAddressData":{
+        "fullName": "Febrian",
+        "telephone": "008123456789",
+        "address": "Jl. Contoh Alamat No. 123",
+        "address2": "RT 01 RW 02",
+        "city": "Jakarta",
+        "country": "United States",
+        "province": "California",
+        "postalCode": "12345"
+    },
+    "manyCharactersAddressData": {
+        "fullName": "ThisIsAVeryLongFullNameWith250CharactersForTestingMaximumLengthValidationInTheCheckoutFormThisFullNameContainsUppercaseLowercaseLettersAndSpacesToSimulateRealWorldUseCaseWhereUserMightEnterExcessivelyLongNamesIntoTheFormFieldsAbcdefghijklmnopq",
+        "telephone": "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890",
+        "address": "ThisIsAVeryLongAddressWith250CharactersForTestingMaximumLengthValidationInTheCheckoutFormThisAddressContainsUppercaseLowercaseLettersNumbersAndSpecialCharactersToSimulateRealWorldUseCaseWhereUserMightEnterExcessivelyLongAddressesIntoTheFor",
+        "address2": "ThisIsAVeryLongAddress2With250CharactersForTestingMaximumLengthValidationInTheCheckoutFormThisAddress2ContainsUppercaseLowercaseLettersNumbersAndSpecialCharactersToSimulateRealWorldUseCaseWhereUserMightEnterExcessivelyLongAddressesIntoTheF",
+        "city": "ThisIsAVeryLongCityNameWith250CharactersForTestingMaximumLengthValidationInTheCheckoutFormThisCityNameContainsUppercaseLowercaseLettersAndSpacesToSimulateRealWorldUseCaseWhereUserMightEnterExcessivelyLongCityNamesIntoTheFormFieldsAbcdefghijklmn",
+        "country": "United States",
+        "province": "California",
+        "postalCode": "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+    }
+}

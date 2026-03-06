@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cypress": "^15.11.0"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.37.0",
+    "cypress-real-events": "^1.15.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
+  },
+  "scripts": {
+    "cy:run:allure": "cypress run --env allure=true",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "npm run cy:run:allure && npm run allure:generate && npm run allure:open",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "delete:reports": "node -e \"const fs=require('fs');const p='cypress/results';if(fs.existsSync(p)){fs.readdirSync(p).forEach(f=>fs.rmSync(p+'/'+f,{recursive:true,force:true}));}\"",
+    "pretest": "npm run delete:reports",
+    "merge:reports": "npx mochawesome-merge cypress/results/mochawesome*.json > cypress/results/combined-report.json",
+    "generate:html": "npx marge cypress/results/combined-report.json --reportDir cypress/reports",
+    "final:report": "npm run merge:reports && npm run generate:html"
+  }
+}
