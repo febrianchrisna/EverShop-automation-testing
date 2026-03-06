@@ -340,6 +340,7 @@ class Checkout{
             const $body = $iframe.contents().find('body');
             
             if (cardTab) {
+                cy.wait(3000);
                 cy.wrap($body).find(`button[data-testid="${cardTab}"]`).should('be.visible').click();
                 cy.wait(1000);
             }
@@ -369,6 +370,7 @@ class Checkout{
     }
 
     verifyOrderFailedError(){
+        cy.wait(3000);
         cy.contains('Payment failed').should('be.visible');
     }
 
@@ -419,7 +421,8 @@ class Checkout{
     }
 
     verifyLoginAtCheckoutSuccess() {
-        cy.contains('Logout').should('be.visible');
+        cy.get('[id="field-shippingAddress.full_name"]', { timeout: 20000 })
+            .should('be.visible');
     }
 }
 

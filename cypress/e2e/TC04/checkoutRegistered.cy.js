@@ -55,7 +55,7 @@ describe('TC04 Checkout Registered User Tests', () => {
         });
     })
 
-    context.only('TC04003 - Checkout with overstock Quantity', () => {
+    context('TC04003 - Checkout with overstock Quantity', () => {
         it('User gagal melakukan checkout dengan quantity melebihi stok yang tersedia dan menampilkan pesan error', () => {
             const { color, quantity } = checkoutData.overStockQuantity;
             checkoutRegistered.itemDetails();
@@ -91,7 +91,7 @@ describe('TC04 Checkout Registered User Tests', () => {
         });
     })
 
-    context.only('TC04006 - Checkout with Re-Login at Checkout Form', () => {
+    context('TC04006 - Checkout with Re-Login at Checkout Form', () => {
         it('User berhasil melakukan checkout dengan login di checkout form', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod } = checkoutData.validShippingAddressData;
             
