@@ -1,2 +1,2 @@
 node_modules
-cypress/e2e/TC07/myAccountPage.cy.js
+cypress/e2e/TC06/filterPage.cy.js
