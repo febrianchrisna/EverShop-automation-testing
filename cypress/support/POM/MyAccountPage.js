@@ -133,11 +133,18 @@ class MyAccount{
     }
 
     verifyEmptyAddressErrorMessage(){
-        cy.contains('Full name is required, Address is required, Province is required, Country is required, Postcode is required').should('be.visible');
+        cy.contains('Full name is required').should('be.visible');
+        cy.contains('Address is required').should('be.visible');
+        cy.contains('Province is required').should('be.visible');
+        cy.contains('Country is required').should('be.visible');
+        cy.contains('Postcode is required').should('be.visible');
     }
 
     verifyInvalidAddressErrorMessage(){
-        cy.contains('Full name must be less than 250 characters, Address must be less than 250 characters, Address 2 must be less than 250 characters, City must be less than 250 characters').should('be.visible');
+        cy.contains('Full name must be less than 250 characters').should('be.visible');
+        cy.contains('Address must be less than 250 characters').should('be.visible');
+        cy.contains('Address 2 must be less than 250 characters').should('be.visible');
+        cy.contains('City must be less than 250 characters').should('be.visible');
     }
 }
 

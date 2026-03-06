@@ -33,9 +33,11 @@ class FilterPage {
         const thumb = thumbIndex === 0 ? this.sliderMinThumb : this.sliderMaxThumb;
 
         thumb.realClick();
+        cy.wait(500);
 
         for (let i = 0; i < steps; i++) {
             cy.realPress(key);
+            cy.wait(300);
         }
     }
 

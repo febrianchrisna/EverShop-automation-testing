@@ -223,10 +223,11 @@ class Checkout{
     addToCart(){
         cy.wait(500);
         this.addToCartButton.click({ force: true });
+        cy.wait(1500);
     }
 
     checkout(){
-        this.checkoutButton.click({ force: true });
+        this.checkoutButton.should('be.visible').click({ force: true });
     }
 
     checkoutLogout(){

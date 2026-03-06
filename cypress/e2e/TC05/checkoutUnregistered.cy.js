@@ -123,7 +123,7 @@ describe('TC05 Checkout Unregistered User Tests', () => {
     })
 
 
-    context.only('TC05008 - Checkout with Insufficient Funds Credit Card', () => {
+    context('TC05008 - Checkout with Insufficient Funds Credit Card', () => {
         it('User gagal melakukan checkout dengan credit card saldo tidak cukup dan menampilkan pesan error', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod, cardTab, cardNumber, cardExpiry, cardCvc, cardCountry } = checkoutUnregisteredData.insufficientFundsCardData;
             
