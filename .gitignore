@@ -1,2 +1,6 @@
 node_modules
 cypress/e2e/TC06/
+allure-results/
+allure-report/
+cypress\results\
+cypress/screenshots/
