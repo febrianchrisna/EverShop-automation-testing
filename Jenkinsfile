@@ -53,7 +53,7 @@ pipeline {
 
         stage('Run Cypress Tests') {
             steps {
-                sh 'npx cypress run --headless || true'
+                sh 'npx cypress run --headless --env allure=true || true'
             }
         }
 
