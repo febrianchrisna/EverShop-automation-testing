@@ -91,7 +91,7 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context.only('TC07006 - Delete Address', () => {
+    context('TC07006 - Delete Address', () => {
         it('Berhasil melakukan penghapusan alamat', () => {
             myAccountPage.clickDeleteAddress();
             myAccountPage.verifyDeleteAddressSuccess();
