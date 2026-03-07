@@ -1,18 +1,18 @@
 {
     "validLogin": {
-        "email": "febriankrisna77@gmail.com",
+        "email": "camden@gmail.com",
         "password": "bootcamp123"
     },
     "unregisteredEmail": {
-        "email": "testgagal@gmail.com",
+        "email": "testgagalgal@gmail.com",
         "password": "bootcamp123"
     },
     "invalidEmailFormat": {
-        "email": "febrian77gmail.com",
+        "email": "joshua77gmail.com",
         "password": "bootcamp123"
     },
     "capitalizedEmail": {
-    "email": "FEBRIKLATEN544@GMAIL.COM",
+    "email": "JOVAS@GMAIL.COM",
     "password": "BOOTCAMP123"
     },
     "emptyData": {
@@ -24,7 +24,7 @@
     "password": "ThisIsAVeryLongPasswordWith250CharactersThatShouldBeUsedForTestingMaximumLengthValidationInTheLoginFormThisPasswordContainsUppercaseLettersLowercaseLettersNumbersAndSpecialCharacters1234567890!@#$%^&*()ThisIsForTestingPurposesOnlyAbcdefghijklm"
     },
     "belowMinimumPasswordCharacters": {
-    "email": "febrian77gmail.com",
+    "email": "test77gmail.com",
     "password": "a"
     },
     "unregiteredCheckoutEmail": {

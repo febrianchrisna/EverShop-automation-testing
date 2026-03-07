@@ -1,12 +1,12 @@
 {
     "validRegister": {
-        "fullName": "Febrian Chrisna",
-        "email": "febriantessting@gmail.com",
+        "fullName": "Reno Gallagaher",
+        "email": "registerberhasil@gmail.com",
         "password": "tugas123"
     },
     "invalidEmailFormat": {
-        "fullName": "Febrian Chrisna",
-        "email": "febriantestingmail.com",
+        "fullName": "Maguire Harry",
+        "email": "testininvgmail.com",
         "password": "tugas123"
     },
     "emptyData": {
@@ -15,23 +15,23 @@
         "password": null
     },
     "capitalizedData": {
-        "fullName": "FEBRIAN CHRISNA",
-        "email": "FEBRIANKAPITAL@GMAIL.COM",
+        "fullName": "NAMA KAPITAL",
+        "email": "KAPITAL@GMAIL.COM",
         "password": "tugas123"
     },
     "manyDataCharacters": {
         "fullName": "ThisIsAVeryLongPasswordWith250CharactersThatShouldBeUsedForTestingMaximumLengthValidationInTheRegistrationFormThisPasswordContainsUppercaseLettersLowercaseLettersNumbersAndSpecialCharacters1234567890",
-        "email": "febrianadd@gmail.com",
+        "email": "manysomany@gmail.com",
         "password": "ThisIsAVeryLongPasswordWith250CharactersThatShouldBeUsedForTestingMaximumLengthValidationInTheRegistrationFormThisPasswordContainsUppercaseLettersLowercaseLettersNumbersAndSpecialCharacters1234567890!@#$%^&*()ThisIsForTestingPurposesOnlyAbcdefghijklm"
     },
     "belowMinimumPasswordCharacters": {
-        "fullName": "Febrian Chrisna",
-        "email": "febrianadd@gmail.com",
+        "fullName": "Password Dikit",
+        "email": "maninimum@gmail.com",
         "password": "a"
     },
     "registeredEmail": {
-        "fullName": "Febrian Chrisna",
-        "email": "febriankrisna77@gmail.com",
+        "fullName": "Hayabusha Gemilang",
+        "email": "camden@gmail.com",
         "password": "tugas123"
     }
 }
