@@ -23,6 +23,7 @@ describe('TC04 Checkout Registered User Tests', () => {
     context('TC04001 - Checkout with Registered User', () => {
         it('User berhasil melakukan checkout dengan data valid dan diarahkan ke halaman konfirmasi', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod } = checkoutData.validShippingAddressData;
+            
             checkoutRegistered.addToCart();
             checkoutRegistered.checkout();
             checkoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
@@ -58,6 +59,7 @@ describe('TC04 Checkout Registered User Tests', () => {
     context('TC04003 - Checkout with overstock Quantity', () => {
         it('User gagal melakukan checkout dengan quantity melebihi stok yang tersedia dan menampilkan pesan error', () => {
             const { color, quantity } = checkoutData.overStockQuantity;
+            
             checkoutRegistered.itemDetails();
             checkoutRegistered.itemDetailsColor(color);
             checkoutRegistered.fillItemQuantity(quantity);
@@ -69,6 +71,7 @@ describe('TC04 Checkout Registered User Tests', () => {
     context('TC04004 - Checkout with Empty Color and Quantity Field', () => {
         it('User gagal melakukan checkout dengan mengkosongkan field Color dan Quantity dan menampilkan pesan error', () => {
             const { color, quantity } = checkoutData.emptyData;
+            
             checkoutRegistered.itemDetails();
             checkoutRegistered.itemDetailsColor(color);
             checkoutRegistered.fillItemQuantity(quantity);
@@ -94,7 +97,6 @@ describe('TC04 Checkout Registered User Tests', () => {
     context('TC04006 - Checkout with Re-Login at Checkout Form', () => {
         it('User berhasil melakukan checkout dengan login di checkout form', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod } = checkoutData.validShippingAddressData;
-            
             checkoutRegistered.addToCart();
             checkoutRegistered.checkout();
             checkoutRegistered.checkoutLogout();
@@ -177,7 +179,6 @@ describe('TC04 Checkout Registered User Tests', () => {
     context('TC04011 - Checkout with another Credit card method (amazon pay)', () => {
         it('User berhasil melakukan checkout', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode, shippingMethod, billingOption, paymentMethod, cardTab } = checkoutData.webhookFailedSimulationData;
-
             checkoutRegistered.addToCart();
             checkoutRegistered.checkout();
             checkoutRegistered.fillShippingAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
