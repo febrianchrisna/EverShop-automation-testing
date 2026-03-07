@@ -247,7 +247,7 @@ class Checkout{
         this.checkoutPasswordField.clear().type(password);
         this.checkoutLoginButton.click();
         cy.wait('@loginRequest', { timeout: 15000 });
-        cy.wait(3000);
+        cy.wait(8000);
     }
 
     fillGuestEmail(email){
@@ -314,13 +314,14 @@ class Checkout{
 
     selectShippingMethod(method){
         if (method) {
-            cy.wait(2000);
+            cy.wait(3000);
             this.shippingMethodContainer.contains(method).should('be.visible').click({ force: true });
         }
+        cy.wait(3000);
     }
 
     selectSameAsBilling(){
-        cy.wait(2000);
+        cy.wait(3000);
         this.sameAsBilling.click({ force: true });
     }
 
