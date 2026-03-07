@@ -57,7 +57,7 @@
     },
         "overStockQuantity": {
         "color": "White",
-        "quantity": "99999"
+        "quantity": "99999999"
     },
     "emptyData": {
         "color": null,
