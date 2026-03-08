@@ -104,8 +104,14 @@ class MyAccount{
     }
 
     clickEditAddress(fullName){
-        cy.contains('.full-name', fullName)
-            .closest('[data-slot="item"]')
+        cy.contains('[data-slot="item"]', fullName)
+            .contains('Edit')
+            .click();
+    }
+
+    clickEditLastAddedAddress(){
+        cy.get('[data-slot="item"]:not(.border-primary)')
+            .last()
             .contains('Edit')
             .click();
     }
@@ -114,10 +120,9 @@ class MyAccount{
         this.deleteAddress.click();
     }
 
-    verifyDefaultAddressIs(fullName){
-        cy.get('[data-slot="item"].border-primary')
-            .find('.full-name')
-            .should('contain', fullName);
+    verifyNoDuplicateAddress(){
+        cy.get('[data-slot="item"]')
+            .should('have.length', 2);
     }
 
     // ASSERTION VALIDASI

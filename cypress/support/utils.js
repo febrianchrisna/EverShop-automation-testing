@@ -3,6 +3,10 @@ export function uniqueEmail(email) {
     return `${local}_${Date.now()}@${domain}`;
 }
 
+export function uniqueName(name) {
+    return `${name} ${Date.now()}`;
+}
+
 // export function disableProtections() {
 //     Cypress.on('window:before:load', (win) => {
 //         // Force window.open to stay in the same tab

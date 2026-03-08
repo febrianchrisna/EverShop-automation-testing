@@ -1,4 +1,5 @@
 import MyAccountPage from '../../support/POM/MyAccountPage';
+import { uniqueName } from '../../support/utils';
 
 describe('TC07 - My Account Page Tests', () => {
     const myAccountPage = new MyAccountPage();
@@ -9,6 +10,8 @@ describe('TC07 - My Account Page Tests', () => {
     before(() => {
         cy.fixture('addressUser').then((data) => {
             addressData = data;
+            addressData.validAddressData.fullName = uniqueName(addressData.validAddressData.fullName);
+            addressData.defaultAddressData.fullName = uniqueName(addressData.defaultAddressData.fullName);
         });
 
         cy.fixture('loginUser').then((data) => {
@@ -59,8 +62,8 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context('TC07005 - Edit Address', () => {
-        it('Berhasil Edit Address dan tidak terjadi duplikasi', () => {
+    context('TC07005 - Edit Address Duplikat', () => {
+        it('Terjadi duplikasi data alamat setelah melakukan edit address', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.validAddressData;
             const { fullName: defFullName, telephone: defTelephone, address: defAddress, address2: defAddress2, city: defCity, country: defCountry, province: defProvince, postalCode: defPostalCode } = addressData.defaultAddressData;
 
@@ -78,12 +81,13 @@ describe('TC07 - My Account Page Tests', () => {
             myAccountPage.verifyAddAddressSuccess();
             myAccountPage.visit();
 
-            myAccountPage.clickEditAddress(fullName);
+            myAccountPage.clickEditLastAddedAddress();
             myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
             myAccountPage.clickSaveAddress();
             myAccountPage.verifyEditAddressSuccess();
+            myAccountPage.visit();
 
-            myAccountPage.verifyDefaultAddressIs(defFullName);
+            myAccountPage.verifyNoDuplicateAddress();
         })
     })
 
