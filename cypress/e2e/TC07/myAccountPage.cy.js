@@ -36,15 +36,22 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
+    context('TC07002 - Delete Address', () => {
+        it('Berhasil melakukan penghapusan alamat', () => {
+            myAccountPage.clickDeleteAddress();
+            myAccountPage.verifyDeleteAddressSuccess();
+        })
+    })
 
-    context('TC07002 - Logout Button', () => {
+
+    context('TC07003 - Logout Button', () => {
         it('User dapat logout dari My Account', () => {
             myAccountPage.clickLogout();
             cy.url().should('not.include', '/account');
         })
     })
 
-    context('TC07003 - Add New Address with Empty Fields', () => {
+    context('TC07004 - Add New Address with Empty Fields', () => {
         it('User tidak dapat menambahkan alamat baru dengan field kosong', () => {
             myAccountPage.clickAddNewAddress();
             myAccountPage.clickSaveAddress();
@@ -52,18 +59,12 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context('TC07004 - Edit Address tidak menimpa Default Address', () => {
-        it('Default address tidak tertimpa ketika user mengedit address lain tanpa set as default', () => {
+    context('TC07005 - Edit Address', () => {
+        it('Berhasil Edit Address dan tidak terjadi duplikasi', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.validAddressData;
             const { fullName: defFullName, telephone: defTelephone, address: defAddress, address2: defAddress2, city: defCity, country: defCountry, province: defProvince, postalCode: defPostalCode } = addressData.defaultAddressData;
 
-            myAccountPage.addNewAddress.click();
-            myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
-            myAccountPage.clickSaveAddress();
-            myAccountPage.verifyAddAddressSuccess();
-            myAccountPage.visit();
-
-            myAccountPage.addNewAddress.click();
+            myAccountPage.clickAddNewAddress();
             myAccountPage.fillAddressForm(defFullName, defTelephone, defAddress, defAddress2, defCity, defCountry, defProvince, defPostalCode);
             myAccountPage.clickSetAsDefault();
             myAccountPage.verifySetAsDefaultChecked();
@@ -71,7 +72,13 @@ describe('TC07 - My Account Page Tests', () => {
             myAccountPage.verifyAddAddressSuccess();
             myAccountPage.visit();
 
-            myAccountPage.clickEditAddress();
+            myAccountPage.clickAddNewAddress();
+            myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
+            myAccountPage.clickSaveAddress();
+            myAccountPage.verifyAddAddressSuccess();
+            myAccountPage.visit();
+
+            myAccountPage.clickEditAddress(fullName);
             myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
             myAccountPage.clickSaveAddress();
             myAccountPage.verifyEditAddressSuccess();
@@ -80,7 +87,7 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context('TC07005 - Add New Address 250 Characters', () => {
+    context('TC07006 - Add New Address 250 Characters', () => {
         it('User tidak dapat menambahkan alamat baru dengan field lebih dari 250 karakter', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.manyCharactersAddressData;
             myAccountPage.clickAddNewAddress();
@@ -88,13 +95,6 @@ describe('TC07 - My Account Page Tests', () => {
             myAccountPage.clickSaveAddress();
             myAccountPage.verifyInvalidAddressErrorMessage();
             
-        })
-    })
-
-    context('TC07006 - Delete Address', () => {
-        it('Berhasil melakukan penghapusan alamat', () => {
-            myAccountPage.clickDeleteAddress();
-            myAccountPage.verifyDeleteAddressSuccess();
         })
     })
 })

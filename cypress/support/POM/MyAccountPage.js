@@ -103,9 +103,11 @@ class MyAccount{
         cy.wait(5000);
     }
 
-    clickEditAddress(){
-        // .first() = klik tombol Edit milik address pertama (yang bukan default)
-        cy.contains('Edit').first().click();
+    clickEditAddress(fullName){
+        cy.contains('.full-name', fullName)
+            .closest('[data-slot="item"]')
+            .contains('Edit')
+            .click();
     }
 
     clickDeleteAddress(){
