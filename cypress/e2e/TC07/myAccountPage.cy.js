@@ -52,18 +52,7 @@ describe('TC07 - My Account Page Tests', () => {
         })
     })
 
-    context('TC07004 - Add New Address 250 Characters', () => {
-        it('User tidak dapat menambahkan alamat baru dengan field lebih dari 250 karakter', () => {
-            const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.manyCharactersAddressData;
-            myAccountPage.clickAddNewAddress();
-            myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
-            myAccountPage.clickSaveAddress();
-            myAccountPage.verifyInvalidAddressErrorMessage();
-            
-        })
-    })
-
-    context('TC07005 - Edit Address tidak menimpa Default Address', () => {
+    context('TC07004 - Edit Address tidak menimpa Default Address', () => {
         it('Default address tidak tertimpa ketika user mengedit address lain tanpa set as default', () => {
             const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.validAddressData;
             const { fullName: defFullName, telephone: defTelephone, address: defAddress, address2: defAddress2, city: defCity, country: defCountry, province: defProvince, postalCode: defPostalCode } = addressData.defaultAddressData;
@@ -88,6 +77,17 @@ describe('TC07 - My Account Page Tests', () => {
             myAccountPage.verifyEditAddressSuccess();
 
             myAccountPage.verifyDefaultAddressIs(defFullName);
+        })
+    })
+
+    context('TC07005 - Add New Address 250 Characters', () => {
+        it('User tidak dapat menambahkan alamat baru dengan field lebih dari 250 karakter', () => {
+            const { fullName, telephone, address, address2, city, country, province, postalCode } = addressData.manyCharactersAddressData;
+            myAccountPage.clickAddNewAddress();
+            myAccountPage.fillAddressForm(fullName, telephone, address, address2, city, country, province, postalCode);
+            myAccountPage.clickSaveAddress();
+            myAccountPage.verifyInvalidAddressErrorMessage();
+            
         })
     })
 
